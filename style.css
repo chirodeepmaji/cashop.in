@@ -1,0 +1,314 @@
+:root {
+    /* Color variables based on the original site's class names [cite: 23963, 23964] */
+    --ck-blue: #0036da;
+    --ck-text-black: #1a1a1a;
+    --ck-text-inactive: #898A8D;
+    --ck-stroke-gray: #d9d9d9;
+    --ck-artBoard-gray: #f4f5f7;
+    --header-height: 82px;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+  color: #ff5100;
+  font-size: 50px;
+}
+
+/* === HEADER STYLES === */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: white;
+    /* Mimics the header shadow [cite: 23960] */
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.04);
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px; 
+    border-bottom: 2px solid #808080;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.header-left{
+  padding-left: 50px;
+}
+
+.header-right {
+    padding-right: 100px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ck-text-black);
+    padding: 8px;
+    display: none; 
+}
+
+.logo {
+
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--ck-text-black);
+    text-decoration: none;
+    /*border-right: 2px solid #808080;*/
+    padding-right: 40px;
+    padding-top: 0px;
+    height: 85px;
+}
+
+
+
+/* Style for placeholder text [cite: 23963] */
+#searchInputTextBox::placeholder {
+    color: var(--ck-text-inactive);
+    font-weight: 500;
+}
+
+/* Style on focus to mimic the blue focus ring [cite: 23963] */
+#searchInputTextBox:focus {
+    border-color: #808080;
+    background-color: white;
+    box-shadow: 0 0 0 1px var(--ck-blue);
+}
+
+.help-link {
+    color: var(--ck-text-black);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding-right: 24px;
+   /* Vertical divider [cite: 23963] */
+    border-right: 2px solid var(--ck-stroke-gray);
+}
+
+.help-link2 {
+    color: var(--ck-text-black);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding-right: 24px;
+   /* Vertical divider [cite: 23963] */
+   /*border-right: 2px solid var(--ck-stroke-gray);*/
+}
+
+
+#login-signup-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--ck-text-black);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    padding-left: 24px; /* Matches the padding of the Help link on the right */
+}
+
+/* === MAIN CONTENT STYLES === */
+main {
+    padding-top: var(--header-height); 
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero {
+     display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 450px;
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 50px;
+    /*background-color: var(--ck-artBoard-gray);*/
+    border-radius: 10px;
+    margin-right: 0px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+
+.product-page {
+    /*padding: 0px 0;*/
+    border: 1px solid #808080;
+    border-right: 1px solid #808080;
+}
+
+.product-page h2 {
+    font-size: 24px;
+    color: var(--ck-text-black);
+    margin-bottom: 20px;
+}
+
+/*------------------partners----------------*/
+
+.partners {
+  border-top: 1px solid #808080;
+  border-right: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+
+
+
+/*----------------------galary--------------------*/
+
+.our-product{
+  padding-top: 80px;
+  padding-bottom: 25px;
+  text-align:left;
+  font-size: 45px;
+}
+
+div.gallery {
+  border: 1px solid #808080;
+  
+}
+
+div.gallery:hover {
+  border: 2px solid #00a2ff;
+  /*transform: translateY(-5px);*/
+  box-shadow: 0 24px 48px rgba(0,0,0,0.1);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+ /* padding: 0px 0px;*/
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--ck-stroke-gray);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop button {
+  font-size: 1.6rem;
+  border-radius: 10px;
+}
+
+
+             /*about us page*/
+
+.about-us{
+  padding-top: 50px;
+  /*background-color: #898A8D;*/
+}
+
+.about-us p {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+
+.about-us h1{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align:left;
+  font-size: 45px;
+}
+
+             /* terms-conditions*/
+
+.terms-conditions{
+  padding-top: 50px;
+ /* background-color: #898A8D;*/
+}
+
+.terms-conditions p {
+  font-size: 19px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+}
+
+.terms-conditions h1{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align:left;
+  font-size: 45px;
+}
+
+.terms-conditions h2 {
+  padding-bottom: 8px;
+}

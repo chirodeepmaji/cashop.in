@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons (for the menu icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <style>
+        /* Custom font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            padding: 16px 0;
+        }
+
+        /* Base style for list items */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+            color: #333;
+        }
+
+        .menu-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Style for the icon */
+        .menu-icon {
+            font-size: 24px;
+            margin-right: 16px;
+            width: 28px; /* Fixed width for alignment */
+            text-align: center;
+            color: #333; /* Default icon color */
+        }
+
+        .menu-label {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            color: #777;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 16px;
+            padding-top: 24px;
+            text-transform: uppercase;
+        }
+        
+        /* Specific style for Logout */
+        .logout-item {
+            color: #ef4444; /* Red color for warning/logout action */
+            border-top: 1px solid #e5e5e5;
+            margin-top: 8px;
+        }
+        
+        .logout-item .menu-icon {
+            color: #ef4444; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Container (Mimics a mobile app screen/card) -->
+    <div class="w-full max-w-sm bg-white shadow-lg rounded-xl overflow-hidden md:max-w-md">
+
+        <!-- Header Greeting -->
+        <div class="p-4 pt-6 pb-4" >
+            <p class="text-lg font-light text-gray-600">Hello, <a href="index.html" style="padding-left: 300px;"><button>BACK</button></a></p>
+            <h1 class="text-xl font-bold text-gray-800">XXXXXXXXXXXX </h1>
+        </div>
+
+        <!-- Summary Cards Section -->
+        <div class="flex p-4 space-x-3">
+            <!-- Total Cashback Card -->
+            <div class="flex-1 p-4 bg-white shadow rounded-lg border border-gray-100">
+                <p class="text-sm font-medium text-gray-600">Total Cashback</p>
+                <p class="text-xl font-bold text-gray-900 mt-1">
+                    ₹2000
+                </p>
+            </div>
+
+            <!-- Total Rewards Card -->
+            <div class="flex-1 p-4 bg-white shadow rounded-lg border border-gray-100">
+                <p class="text-sm font-medium text-gray-600">Total Rewards</p>
+                <p class="text-xl font-bold text-gray-900 mt-1">
+                    ₹1000
+                </p>
+            </div>
+        </div>
+        
+        <!-- Divider for the first line in the image -->
+        <div class="px-4 py-2">
+            <div class="border-t border-gray-200"></div>
+        </div>
+
+        <!-- Section: Account Settings (Single Item) -->
+        <a href="#" class="menu-item">
+            <i class="ph ph-gear menu-icon"></i> <!-- Settings Icon -->
+            <span class="menu-label">Account Settings</span>
+        </a>
+
+        <!-- Menu Navigation List -->
+        <nav>
+            
+            <!-- Cashback & Rewards Section -->
+            <div class="section-title">Cashback & Rewards</div>
+            <a href="#" class="menu-item">
+                <i class="ph ph-wallet menu-icon"></i> <!-- Wallet/Earnings Icon -->
+                <span class="menu-label">My Earnings</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-bank menu-icon"></i> <!-- withdrawl -->
+                <span class="menu-label">withdrawl</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-currency-inr menu-icon"></i> <!-- Rupee/Payments Icon -->
+                <span class="menu-label">Payments</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-clock-counter-clockwise menu-icon"></i> <!-- History Icon -->
+                <span class="menu-label">Payments History</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-magnifying-glass menu-icon"></i> <!-- Queries Icon -->
+                <span class="menu-label">Your Queries</span>
+            </a>
+            
+            <!-- Referrals Section -->
+            <div class="section-title border-t border-gray-200 mt-2">Referrals</div>
+            <a href="#" class="menu-item">
+                <i class="ph ph-share-network menu-icon"></i> <!-- Refer & Earn Icon -->
+                <span class="menu-label">Refer & Earn</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-users menu-icon"></i> <!-- My Referrals Icon -->
+                <span class="menu-label">My Referrals</span>
+            </a>
+            
+            <!-- Support & Feedback Section -->
+            <div class="section-title border-t border-gray-200 mt-2">Support & feedback</div>
+            <a href="#" class="menu-item">
+                <i class="ph ph-question menu-icon"></i> <!-- Help Icon -->
+                <span class="menu-label">Help</span>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="ph ph-star menu-icon"></i> <!-- Review Us Icon -->
+                <span class="menu-label">Review Us</span>
+            </a>
+            
+            <!-- Policy and Logout -->
+            <div class="mt-4">
+                <div class="border-t border-gray-200"></div>
+            </div>
+            <a href="#" class="menu-item">
+                <i class="ph ph-lock menu-icon"></i> <!-- Privacy Policy Icon -->
+                <span class="menu-label">Privacy Policy</span>
+            </a>
+            
+            <a href="#" class="menu-item logout-item">
+                <i class="ph ph-sign-out menu-icon"></i> <!-- Logout Icon -->
+                <span class="menu-label">Logout</span>
+            </a>
+            
+        </nav>
+
+    </div>
+    
+</body>
+</html>
